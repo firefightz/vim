@@ -56,3 +56,16 @@ inoremap jk <Esc>
 " Map Ctrl-c as Escape (optional)
 inoremap <C-c> <Esc>
 
+" This is crucial as it disables vi-compatibility mode, enabling Vim's advanced features.
+set nocompatible
+
+set smartindent             " Smart auto-indentation
+set autoindent              " Auto-indent new lines
+set hlsearch                " Highlight search matches
+set incsearch               " Incremental search
+set ignorecase              " Case-insensitive search
+set smartcase               " Smart case-sensitive search
+set history=1000            " Increase command history
+set hidden                  " Allow hidden buffers
+set autoread                " Auto-reload modified files
+set backspace=indent,eol,start " Allow flexible backspacing
