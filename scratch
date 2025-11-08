@@ -1,0 +1,38 @@
+Copy, Cutting, and Pasting in Vim/Vi - The Basics
+Press esc to return to normal mode. Any character typed in normal mode will be interpreted as a vim command.
+Navigate your cursor to the beginning of where you want to copy or cut.
+To enter visual mode, you have 3 options. We suggest using visual mode because the selected characters are highlighted, and it’s clearer to see what’s happening. However, we have the keyboard shortcuts for normal mode (which achieve the exact same effect) in the section below.
+Press v (lowercase) to enter visual mode. This will start selecting from where your cursor is.
+Press V (uppercase) to enter visual line mode. This will select the entire line.
+Press CTRL+V to enter visual block mode.
+Move your cursor to the end of where you want to copy or cut.
+Press y to copy. Press d to cut.
+Move the cursor to where you want to paste your selection.
+Press P (uppercase) to paste before your cursor. Press p (lowercase) to paste after your cursor.
+Vim Keyboard Shortcuts
+Using arrow keys (or if you are an expert Vim user - h, j, k, and l) to move around in your vim file can take a long time.
+
+Here are vim keyboard shortcuts for copying and cutting if you want to be even more efficient than the basic steps outlined above.
+
+Copying (Yanking)
+yy: Copy the current line in vi
+3yy: To yank multiple lines in vim, type in the number of lines followed by yy. This command will copy (yank) 3 lines starting from your cursor position.
+y$: Copy everything from the cursor to the end of the line
+y^: Copy everything from the start of the line to the cursor.
+yiw: Copy the current word.
+Cutting (Deleting)
+dd: Cut the current line
+3dd: Cut 3 lines, starting from the cursor
+d$: Cut everything from the cursor to the end of the line
+Putting (Pasting)
+P (uppercase): Paste before your cursor
+p (lowercase): Paste after your cursor
+What Happens Under the Hood?
+Vim terms are slightly different from their conceptual counterparts that we mentioned above because these actions by default do not interact with the OS clipboard. For example, you can't paste yanked text from Vim into a different application with CMD + V.
+
+Yank, delete, and put interact with Vim's notion of “registers”, which are basically Vim -specific clipboards. Each register is named with a character, which you can use to interact with that register. For example, you might yank line 50 of the current file to register “a” and yank line 14 of the same file to register “b”, because you intend to paste both line 50 and line 14.
+
+To learn more about vim registers, check out this Stack Overflow page.
+
+Conclusion
+This should be everything you need to get started to copy, cut and paste in Vi. If you didn’t find what you were looking for, it may be worth checking out the official vim docs.
